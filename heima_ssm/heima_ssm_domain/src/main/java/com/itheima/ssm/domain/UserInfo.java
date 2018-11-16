@@ -13,6 +13,16 @@ public class UserInfo {
     private String statusStr;
     private List<Role> roles;
 
+    public String getStatusStr() {
+        //状态0 未开启 1 开启
+        if (status == 0) {
+            statusStr = "未开启";
+        } else if (status == 1) {
+            statusStr = "开启";
+        }
+        return statusStr;
+    }
+
     public String getId() {
         return id;
     }
@@ -59,10 +69,6 @@ public class UserInfo {
 
     public void setStatus(int status) {
         this.status = status;
-    }
-
-    public String getStatusStr() {
-        return statusStr;
     }
 
     public void setStatusStr(String statusStr) {
